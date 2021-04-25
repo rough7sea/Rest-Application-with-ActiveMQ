@@ -59,7 +59,7 @@ public class NoteServiceImpl implements NoteService {
         for (Map.Entry<Long, Note> entry : notes.entrySet()) {
             Note note = entry.getValue();
             if ((Objects.nonNull(note.getTitle()) && note.getTitle().contains(query)) ||
-                    ((Objects.nonNull(note.getContent()) && note.getContent().contains(query)))){
+                    (Objects.nonNull(note.getContent()) && note.getContent().contains(query))){
                 result.add(checkNote(note));
             }
         }
