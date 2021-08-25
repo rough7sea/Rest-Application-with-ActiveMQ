@@ -1,4 +1,4 @@
-# demo
+# Rest Application with ActiveMQ
 Приложение стартует на порте 8080
 
 Конфигурационный файл src/main/resources/application.properties
