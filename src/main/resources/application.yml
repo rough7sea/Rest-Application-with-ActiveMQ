@@ -1,0 +1,20 @@
+app:
+  n: 3
+spring:
+  activemq:
+    broker-url: ${QUEUE_BROKER_URL:tcp://localhost:61616}
+    user: admin
+    password: admin
+    queue:
+      name: demo.queue
+destination:
+  topic: demo.topic
+
+---
+spring:
+  config:
+    activate:
+      on-profile: in-memory
+  activemq:
+    broker-url: vm://embedded?broker.persistent=false,useShutdownHook=false
+    in-memory: true

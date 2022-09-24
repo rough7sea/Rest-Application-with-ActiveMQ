@@ -16,9 +16,9 @@ public class JmsSenderConfig {
 
     @Bean
     public ActiveMQConnectionFactory senderActiveMQConnectionFactory() {
-        ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory();
-        activeMQConnectionFactory.setBrokerURL(brokerUrl);
-        return activeMQConnectionFactory;
+        var factory = new ActiveMQConnectionFactory();
+        factory.setBrokerURL(brokerUrl);
+        return factory;
     }
 
     @Bean

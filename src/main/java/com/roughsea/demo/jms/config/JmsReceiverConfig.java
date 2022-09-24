@@ -17,15 +17,15 @@ public class JmsReceiverConfig {
 
     @Bean
     public ActiveMQConnectionFactory receiverActiveMQConnectionFactory() {
-        ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory();
-        activeMQConnectionFactory.setBrokerURL(brokerUrl);
-        return activeMQConnectionFactory;
+        var factory = new ActiveMQConnectionFactory();
+        factory.setBrokerURL(brokerUrl);
+        return factory;
     }
 
     @Bean
     @Qualifier("jmsQueueListenerContainerFactory")
     public DefaultJmsListenerContainerFactory jmsQueueListenerContainerFactory() {
-        DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
+        var factory = new DefaultJmsListenerContainerFactory();
         factory.setConnectionFactory(receiverActiveMQConnectionFactory());
         factory.setPubSubDomain(false);
         return factory;
@@ -34,7 +34,7 @@ public class JmsReceiverConfig {
     @Bean
     @Qualifier("jmsTopicListenerContainerFactory")
     public DefaultJmsListenerContainerFactory jmsTopicListenerContainerFactory() {
-        DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
+        var factory = new DefaultJmsListenerContainerFactory();
         factory.setConnectionFactory(receiverActiveMQConnectionFactory());
         factory.setPubSubDomain(true);
         return factory;

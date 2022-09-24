@@ -1,7 +1,7 @@
 package com.roughsea.demo.jms.controller;
 
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -11,16 +11,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Slf4j
 @RestController
 @RequestMapping("/jms")
-@Slf4j
+@AllArgsConstructor
 public class JmsController {
 
-    @Autowired
     @Qualifier("topicJmsTemplate")
     private JmsTemplate topicJmsTemplate;
 
-    @Autowired
     @Qualifier("queueJmsTemplate")
     private JmsTemplate queueJmsTemplate;
 
