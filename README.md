@@ -1,8 +1,8 @@
 # Rest Application with ActiveMQ
 Приложение стартует на порте 8080
 
-Конфигурационный файл src/main/resources/application.properties
-
 Доступ к документации API http://localhost:8080/swagger-ui.html
 
-Доступ к ActiveMQ настоен на tcp://localhost:61616
+Для активации очереди в памяти используйте профиль 'in-memory'
+
+Переменная для доступа к внешней очереди: **QUEUE_BROKER_URL** (по умолчанию = tcp://localhost:61616)

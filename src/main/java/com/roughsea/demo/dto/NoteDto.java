@@ -1,4 +1,4 @@
-package com.roughsea.demo.entity;
+package com.roughsea.demo.dto;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -10,8 +10,7 @@ import lombok.experimental.FieldDefaults;
 @Builder
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Note {
-    final Long id;
+public class NoteDto {
     String title;
     String content;
 }
