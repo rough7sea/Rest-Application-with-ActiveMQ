@@ -18,15 +18,12 @@ public class NoteService {
     private int N;
 
     public Note add(NoteDto dto){
-
-        Note note = Note.builder()
-                .id(counter)
-                .title(dto.getTitle())
-                .content(dto.getContent())
-                .build();
-
-        notes.put(counter++, note);
-        return note;
+        return notes.put(counter++,
+                Note.builder()
+                        .id(counter)
+                        .title(dto.getTitle())
+                        .content(dto.getContent())
+                        .build());
     }
 
     public Note getById(Long id){
