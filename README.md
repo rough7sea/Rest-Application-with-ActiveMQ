@@ -6,3 +6,7 @@
 Для активации очереди в памяти используйте профиль 'in-memory'
 
 Переменная для доступа к внешней очереди: **QUEUE_BROKER_URL** (по умолчанию = tcp://localhost:61616)
+
+Coverage: 
+
+![Branches](.github/badges/branches.svg)
