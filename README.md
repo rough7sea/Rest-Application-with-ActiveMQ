@@ -9,7 +9,7 @@
 
 
 Build:
-* [![Java CI with Maven](https://github.com/rough7sea/Rest-Application-with-ActiveMQ/actions/workflows/maven.yml/badge.svg)](https://github.com/rough7sea/Rest-Application-with-ActiveMQ/actions/workflows/maven.yml)
+* [![Java Build](https://github.com/rough7sea/Rest-Application-with-ActiveMQ/actions/workflows/maven.yml/badge.svg)](https://github.com/rough7sea/Rest-Application-with-ActiveMQ/actions/workflows/maven.yml)
 
 Coverage: 
 * ![Coverage](.github/badges/jacoco.svg)
